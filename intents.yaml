@@ -1,0 +1,394 @@
+# Search intent
+type: intent
+name: search
+slots:
+  - name: query
+    entity: query
+  - name: site
+    entity: site
+utterances:
+  - search [query]
+  - search for [query]
+  - do a search for [query]
+  - search the web for [query]
+  - find [query]
+  - find me [query]
+  - find me [query] on the web
+  - look up [query]
+  - get me [query]
+  - how do I [query]
+  - what is [query]
+  - google [query]
+  - google for [query]
+  - search the web for [query]
+  - search the internet for [query]
+  - search for [query] on the web
+  - look on [site] for [query]
+  - Do a [site] search for [query]
+  - search for [query] on [site]
+  - search this site for [query]
+
+---
+
+type: intent
+name: goto
+slots:
+  - name: site
+    entity: site
+utterances:
+  - Go to [site]
+  - bring me to [site]
+  - navigate to [site]
+  - open [site]
+  - open [site] in a new tab
+  - open [site] in a new window
+  - take me to [site]
+
+---
+
+type: intent
+name: mute
+utterances:
+  - mute
+  - turn off all
+  - turn off whatever is playing
+  - turn off music
+  - turn off audio
+  - turn off sound
+  - quiet sound
+  - shut up
+  - stop sound
+  - mute everything
+  - mute all
+  - quiet
+  - turn off the volume
+  - stop the audio
+  - sound off
+  - volume off
+
+# Missing: stop the msuic, volume up/down
+
+---
+
+type: intent
+name: pause
+utterances:
+  - pause
+  - stop
+  - pause video
+  - stop video
+
+---
+
+type: intent
+name: play
+utterances:
+  - play
+  - restart
+  - continue
+  - watch
+
+---
+
+type: intent
+name: findTab
+slots:
+  - name: query
+    entity: query
+  - name: index
+    entity: snips/ordinal
+utterances:
+  - find the tab with [query]
+  - find the [query] tab
+  - bring me to [query]
+  - open tab [query]
+  - select tab [query]
+  - go to the [index] tab
+  - go to the tab with [query]
+  - switch to [query] tab
+  - switch to [query]
+
+---
+
+type: intent
+name: weather
+slots:
+  - name: place
+    entity: place
+utterances:
+  - what's the weather in [place]
+  - what's the weather
+  - what is the weather in [place]
+  - what is the weather
+  - what is the forecast in [place]
+  - what is the forecast
+  - what's the forecast in [place]
+  - what is the forecat
+  - what's the temperature
+  - what's the temperature in [place]
+  - what is the temperature
+  - what is the temperature in [place]
+  - what's the temp
+  - what's the temp in [place]
+  - tell me the forecast in [place]
+  - tell me the forecast
+  - "[place] temperature"
+  - "[place] weather"
+  - what's it like outside
+  - how is the weather
+  - how's the weather
+  - how is the temperature
+  - how's the temperature
+  - is it nice out
+  - check weather in [place]
+
+# Missing: Is it (cold / warm / raining / drizzling / snowing / hailing / windy / chilly / sunny / cloudy / storming / stormy / thunderstorming) out
+
+---
+
+type: intent
+name: timerStart
+slots:
+  - name: duration
+    entity: snips/duration
+utterances:
+  - set a timer for [duration]
+  - set the timer for [duration]
+  - start timer for [duration]
+  - start the timer for [duration]
+  - start the timer for [duration] time
+  - count down from [duration]
+  - start timer
+  - restart timer
+  - resume timer
+
+---
+
+type: intent
+name: timerPause
+utterances:
+  - pause timer
+  - pause
+
+---
+
+type: intent
+name: timerQuery
+utterances:
+  - how much time left
+  - how much time left on timer
+
+---
+
+type: intent
+name: timerStope
+utterances:
+  - delete timer
+  - stop timer
+  - clear timer
+
+---
+
+type: intent
+name: playMusic
+slots:
+  - name: query
+    entity: query
+  - name: song
+    entity: snips/musicTrack
+  - name: artist
+    entity: snips/musicArtist
+  - name: genre
+    entity: genre
+  - name: album
+    entity: snips/musicAlbum
+  - name: playlist
+    entity: playlist
+utterances:
+  - play [query]
+  - play song [song]
+  - play album [album]
+  - play playlist [playlist]
+  - play artist [artist]
+  - play musician [artist]
+  - play band [artist]
+  - play genre [genre]
+  - play best of [artist]
+  - play top [genre]
+  - play top [artist]
+  - play top music
+  - play my list [playlist]
+  - play my [playlist]
+
+---
+
+type: intent
+name: musicBack
+utterances:
+  - back
+  - previous
+  - previous song
+  - rewind
+  - go back
+  - go to previous
+  - go to previous song
+
+---
+
+type: intent
+name: musicNext
+utterances:
+  - next
+  - next song
+  - skip song
+  - forward
+  - skip
+  - forward song
+
+---
+
+type: intent
+name: musicShuffle
+utterances:
+  - shuffle
+  - play random
+  - randomize
+
+---
+
+type: intent
+name: musicPause
+utterances:
+  - pause
+  - pause music
+  - stop
+  - stop music
+  - wait
+  - pause song
+  - stop song
+
+---
+
+type: intent
+name: musicResume
+utterances:
+  - resume
+  - resume music
+  - play music
+  - unpause
+  - unpause music
+  - unpause song
+  - continue
+  - continue music
+
+# Missing: variations on shuffle/search, repeat
+---
+
+type: intent
+name: readPage
+utterances:
+  - read page
+  - read this article
+  - read this
+  - read
+  - speak article
+  - read out loud
+  - read article out loud
+  - read this out loud
+
+---
+
+type: intent
+name: closeTab
+utterances:
+  - close this tab
+  - close this
+  - close tab
+
+---
+
+type: intent
+name: tabBack
+utterances:
+  - go back
+  - back
+
+# Missing: close window, Select [link / page element description]
+
+---
+
+type: entity
+name: query
+values:
+  - foobar
+
+---
+
+type: entity
+name: site
+values:
+  - amazon
+  - amazon.com
+  - walmart
+  - walmart.com
+  - google
+  - google.com
+  - wikipedia
+  - wikipedia.org
+  - wiki
+  - gmail
+  - new york times
+  - ny times
+  - washington post
+
+---
+
+type: entity
+name: place
+values:
+  - snips/city
+  - snips/country
+  - snips/region
+
+---
+
+type: entity
+name: genre
+values:
+  - rock
+  - rock and roll
+  - folk
+  - folk music
+  - folk rock
+  - pop
+  - pop music
+  - r and b
+  - reggae
+  - funk
+  - jazz
+  - musical
+  - punk
+  - punk rock
+  - dance
+  - dance music
+  - hip hop
+  - rap
+  - soul
+  - alternative
+  - alternative rock
+  - altrock
+  - alternative music
+  - blues
+  - country
+  - country music
+  - heavy metal
+  - metal
+  - techno
+
+
+---
+
+type: entity
+name: playlist
+values:
+  - foobar
